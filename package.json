@@ -1,20 +1,21 @@
 {
-  "name": "paste-image-to-qiniu",
-  "displayName": "paste image to qiniu",
-  "description": "截图上传七牛云插件",
-  "version": "0.0.1",
-  "publisher": "favers",
+  "name": "andyliwr-vscode-image-upload",
+  "displayName": "andyliwr-vscode-image-upload",
+  "description": "上传图片至七牛云，项目克隆至vscode-qiniu-upload-image，额外加了一些配置",
+  "icon": "screenshot/logo.png",
+  "version": "0.0.4",
+  "publisher": "andyliwr",
   "author": {
-    "name": "favers",
-    "email": "favers0601@gmail.com"
+    "name": "andyliwr",
+    "email": "andyliwr@outlook.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/favers/vscode-qiniu-upload-image.git"
+    "url": "https://github.com/Andyliwr/vscode-qiniu-upload-image.git"
   },
-  "homepage": "https://github.com/favers/vscode-qiniu-upload-image/blob/master/README.md",
+  "homepage": "https://github.com/Andyliwr/vscode-qiniu-upload-image/blob/master/README.md",
   "bugs": {
-    "url": "https://github.com/favers/vscode-qiniu-upload-image/issues"
+    "url": "https://github.com/Andyliwr/vscode-qiniu-upload-image/issues"
   },
   "engines": {
     "vscode": "^1.11.0"
@@ -106,7 +107,7 @@
     "@types/mocha": "^2.2.32"
   },
   "dependencies": {
-    "moment": "^2.18.1",
+    "moment": "^2.22.2",
     "qiniu": "^6.1.13"
   }
 }

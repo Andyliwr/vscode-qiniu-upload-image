@@ -1,17 +1,13 @@
-# vscode-paste-image-to-qiniu
+### andyliwr-vscode-image-upload
+克隆项目至[vscode-qiniu-upload-image](https://github.com/favers/vscode-qiniu-upload-image)
 
-一个可以支持截图粘贴上传图片到七牛、让你写用vscode写markdown有更好的体验。
+主要更新如下：
+1. 修复使用https上传时出现的七牛回调411的错误，见[issue](https://github.com/favers/vscode-qiniu-upload-image/issues/13)
+2. 新增选项saveImageToLocal来让用户选择是否将粘贴板的任务存储到项目本地
 
-![screenshot](./screenshot/screenshot.gif)
+PS: 项目并非抄袭`vscode-qiniu-upload-image`，我已经提了[`pull-request`](https://github.com/favers/vscode-qiniu-upload-image/pull/14)给原作者，发布到网上只是为了方便自己下载和使用。
 
-## 安装
-输入命令：
-```bash
-ext install paste-image-to-qiniu
-```
-或者在插件应用商店搜索paste-image-to-qiniu安装
-
-## 参数设置
+参数配置：
 ```js
 {
     // 有效的七牛 AccessKey 签名授权
@@ -44,10 +40,3 @@ ext install paste-image-to-qiniu
     // 本地储存位置
     "pasteImageToQiniu.localPath":""
 }
-```
-
-一直使用vscode来开发、写笔记文章、但是用了几款vscode的图床插件都不是很符合我的需求。今天本来想看看书写点笔记、但是发现截图了去处理图片太过于麻烦、于是有了这个插件、仅仅是想体验一下vscode插件的开发流程、也可以方便自己的写体验。
-
-将[vscode-paste-image](https://github.com/mushanshitiancai/vscode-paste-image)和[vscode-qiniu-upload-image](https://github.com/yscoder/vscode-qiniu-upload-image)综合改成了现在这个插件。
-
-如果用的开心给个star也不错！

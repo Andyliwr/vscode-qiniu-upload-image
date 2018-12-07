@@ -45,7 +45,6 @@ function start() {
     let filePath = fileUri.fsPath;
     let imagePath = getImagePath(filePath, selectText, localPath);
     const mdFilePath = editor.document.fileName;
-    const mdFileName = path.basename(mdFilePath, path.extname(mdFilePath));
     createImageDirWithImagePath(imagePath).then(imagePath => {
         saveClipboardImageToFileAndGetPath(imagePath, (imagePath) => {
             if (!imagePath) return;
@@ -133,9 +132,7 @@ function saveClipboardImageToFileAndGetPath(imagePath, cb) {
             '-file', scriptPath,
             imagePath
         ]);
-        powershell.on('exit', function (code, signal) {
-
-        });
+        powershell.on('exit', function () {});
         powershell.stdout.on('data', function (data) {
             cb(data.toString().trim());
         });
@@ -144,9 +141,7 @@ function saveClipboardImageToFileAndGetPath(imagePath, cb) {
         let scriptPath = path.join(__dirname, './lib/mac.applescript');
 
         let ascript = spawn('osascript', [scriptPath, imagePath]);
-        ascript.on('exit', function (code, signal) {
-            
-        });
+        ascript.on('exit', function () {});
 
         ascript.stdout.on('data', function (data) {
             cb(data.toString().trim());
@@ -157,9 +152,7 @@ function saveClipboardImageToFileAndGetPath(imagePath, cb) {
         let scriptPath = path.join(__dirname, './lib/linux.sh');
 
         let ascript = spawn('sh', [scriptPath, imagePath]);
-        ascript.on('exit', function (code, signal) {
-            
-        });
+        ascript.on('exit', function () {});
 
         ascript.stdout.on('data', function (data) {
             let result = data.toString().trim();
